@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>com.webpage1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+<context-param>
+  		<param-name>driver</param-name>
+  		<param-value>oracle.jdbc.driver.OracleDriver</param-value>
+  </context-param>
+  
+    <context-param>
+  		<param-name>URL</param-name>
+  		<param-value>jdbc:oracle:thin:@localhost:1521:xe</param-value>
+  </context-param>
+  
+    <context-param>
+  		<param-name>User_name</param-name>
+  		<param-value>system</param-value>
+  </context-param>
+  
+    <context-param>
+  		<param-name>Pass</param-name>
+  		<param-value>vine96</param-value>
+  </context-param>
+
+<servlet>
+	<servlet-name>LoginAction</servlet-name>
+	<servlet-class>LoginAction</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>LoginAction</servlet-name>
+	<url-pattern>/LoginAction</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>RegisterAction</servlet-name>
+	<servlet-class>RegisterAction</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>RegisterAction</servlet-name>
+	<url-pattern>/RegisterAction</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>ForgetAction</servlet-name>
+	<servlet-class>ForgetAction</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>ForgetAction</servlet-name>
+	<url-pattern>/ForgetAction</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>FetchingAction</servlet-name>
+	<servlet-class>FetchingAction</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>FetchingAction</servlet-name>
+	<url-pattern>/FetchingAction</url-pattern>
+</servlet-mapping>
+  
+  
+</web-app>
